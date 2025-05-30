@@ -31,11 +31,17 @@ https://app.blocksec.com/explorer/tx/bsc/0xff77c9d0530fe6bbf6a5f24c5ddff466e0eaa
 ## Q2
 
 1.攻击者 EOA 发起交易调用攻击合约的 test 函数
+
 2.从 DPP 请求闪电贷,攻击合约调用 DPP 合约的 `flashLoan(baseAmount, quoteAmount, address(this), callbackData)` 函数
+
 3.DPP 闪电贷回调执行合约的 `DPPFlashLoanCall` 函数
+
 4.在回调函数内利用攻击合约
+
 5.偿还闪电贷
+
 6.然后用多个代币循环套利(registration->transfer->approval)
+
 
 ## Q3
 
